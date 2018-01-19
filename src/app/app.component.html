@@ -1,0 +1,46 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 blueColored>
+    TeamConnect Pro
+  </h1>
+
+</div>
+
+done1 <br>
+<ul *ngFor="let fruit of fruits; let i=index">
+  <li>{{i+1}} - {{fruit}}</li>
+</ul>
+done2 <br>
+
+<div *ngIf="visible; then evenClicked else oddClicked"> This works</div>
+
+<button (click)="toggleDiv()">Toggle</button>
+
+<ng-template #oddClicked>Odd Number of clicks</ng-template>
+<ng-template #evenClicked>Even Number of clicks</ng-template>
+
+<br>
+<hr>
+{{counter}}
+<div *ngIf="counter % 2==0">Even counter: {{counter}}</div>
+
+<hr>
+
+1 + 1 = <input type="text" value={{result}}>
+
+Result: {{result}}
+
+
+<hr>
+Hello {{username}}
+Username: <input type="text" [(ngModel)]="username">
+
+<hr>
+
+<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Dashboard</a><br>
+<a routerLink="/login" routerLinkActive="active">Login</a>
+
+<h2> Router Views </h2>
+
+<router-outlet></router-outlet>
+
